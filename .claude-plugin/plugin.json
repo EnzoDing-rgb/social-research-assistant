@@ -1,0 +1,14 @@
+{
+  "name": "social-research-assistant",
+  "version": "1.0.0",
+  "description": "社科研究全流程 AI 助手。编排 GPT Researcher + Academic Research Skills + OpenSpec + Ralph Loop + Goal Workflow 为统一研究工作流。",
+  "author": {
+    "name": "丁冯德",
+    "email": "enzoding@foxmail.com"
+  },
+  "homepage": "https://github.com/enzoding/social-research-assistant",
+  "repository": "https://github.com/enzoding/social-research-assistant",
+  "license": "MIT",
+  "keywords": ["research", "academic", "social-science", "literature-review", "triangulation"],
+  "skills": ["skills/social-research-assistant.md"]
+}
