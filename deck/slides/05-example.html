@@ -5,32 +5,68 @@
 <title>05 · Work Model</title>
 <link rel="stylesheet" href="../shared/fonts.css">
 <link rel="stylesheet" href="../shared/handdrawn.css">
-<style>
-  .clock {
-    font-family: var(--font-hand);
-    font-size: 48px;
-    text-align: center;
-    margin-top: 20px;
-    color: var(--accent);
-  }
-</style>
 </head>
 <body>
 <div class="page-num">05 ★</div>
 <div class="slide-main">
-  <div class="kicker">Example · Work Model</div>
-  <h1 style="font-size:48px">World Models 文献综述</h1>
-  <p class="subtitle">话题不熟 → ~1h → 可审稿的 Survey 草稿</p>
-  <div class="example-layout">
-    <div class="bubble">「World Models<br>到底是什么？」</div>
-    <div class="stack">
-      <div class="stack-item">📋 研究设计 · 收窄范围与受众</div>
-      <div class="stack-item">📚 多路文献检索与合并</div>
-      <div class="stack-item">📝 章节提纲 + 英文 Survey 草稿</div>
-      <div class="stack-item">🔍 同行评审 + 引用审计</div>
+  <div class="kicker">Work Model · ~1h</div>
+  <p class="wm-hook">机器如何「想象」下一刻的世界？</p>
+  <div class="wm-visual">
+    <div class="wm-brain">
+      <svg viewBox="0 0 120 100" aria-hidden="true">
+        <ellipse cx="60" cy="52" rx="48" ry="40" stroke="#1a1a1a" stroke-width="2.5" fill="#e4dcf4"/>
+        <path d="M30 48 Q60 28 90 48 Q60 72 30 48" stroke="#6b9fd4" stroke-width="2" fill="none"/>
+        <circle cx="48" cy="46" r="4" fill="#1a1a1a"/>
+        <circle cx="72" cy="46" r="4" fill="#1a1a1a"/>
+        <path d="M52 58 Q60 64 68 58" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <p>脑内有个世界</p>
+    </div>
+    <div style="text-align:center;font-family:var(--font-hand);font-size:56px;color:var(--muted)">→</div>
+    <div class="wm-brain">
+      <svg viewBox="0 0 120 100" aria-hidden="true">
+        <rect x="20" y="30" width="80" height="50" rx="8" stroke="#1a1a1a" stroke-width="2.5" fill="#dcead6"/>
+        <path d="M32 48h56M32 60h40" stroke="#5f5a50" stroke-width="2" stroke-linecap="round"/>
+        <path d="M60 20v14M48 26l12-8 12 8" stroke="#6b9fd4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <p>预测 · 生成 · 规划</p>
     </div>
   </div>
-  <div class="clock">⏱ ~1 小时 · 端到端 artifact</div>
+  <div class="wm-triad">
+    <div class="wm-card">
+      <svg class="wm-icon" viewBox="0 0 88 88" aria-hidden="true">
+        <rect x="8" y="18" width="72" height="52" rx="6" stroke="#1a1a1a" stroke-width="2.5" fill="#fff"/>
+        <polygon points="44,32 58,48 30,48" stroke="#6b9fd4" stroke-width="2" fill="#d9e8f6"/>
+        <circle cx="68" cy="24" r="8" stroke="#1a1a1a" stroke-width="2" fill="#f5deb8"/>
+      </svg>
+      <h3>Renderer</h3>
+      <p class="wm-role">画出来</p>
+      <p class="wm-example">Sora 生成<br>下一场景</p>
+    </div>
+    <div class="wm-card">
+      <svg class="wm-icon" viewBox="0 0 88 88" aria-hidden="true">
+        <rect x="14" y="50" width="60" height="12" rx="3" stroke="#1a1a1a" stroke-width="2.5" fill="#dcead6"/>
+        <rect x="36" y="28" width="16" height="24" stroke="#1a1a1a" stroke-width="2" fill="#f5deb8"/>
+        <circle cx="44" cy="22" r="10" stroke="#1a1a1a" stroke-width="2" fill="#fff"/>
+        <path d="M20 56h8M60 56h8" stroke="#6b9fd4" stroke-width="2.5"/>
+      </svg>
+      <h3>Simulator</h3>
+      <p class="wm-role">算物理</p>
+      <p class="wm-example">Atari 里<br>预测下一帧</p>
+    </div>
+    <div class="wm-card">
+      <svg class="wm-icon" viewBox="0 0 88 88" aria-hidden="true">
+        <rect x="10" y="40" width="68" height="36" rx="4" stroke="#1a1a1a" stroke-width="2.5" fill="#dcead6"/>
+        <rect x="22" y="22" width="20" height="20" stroke="#1a1a1a" stroke-width="2" fill="#d9e8f6"/>
+        <rect x="46" y="26" width="16" height="16" stroke="#1a1a1a" stroke-width="2" fill="#f5deb8"/>
+        <path d="M44 58l8-8 8 8" stroke="#6b9fd4" stroke-width="2.5" fill="none"/>
+      </svg>
+      <h3>Planner</h3>
+      <p class="wm-role">做决策</p>
+      <p class="wm-example">Minecraft 里<br>规划下一步</p>
+    </div>
+  </div>
+  <p class="wm-foot">不熟的话题 → 一小时 → 可审稿的 Survey 草稿</p>
 </div>
 <script src="../shared/nav-keys.js"></script>
 </body>

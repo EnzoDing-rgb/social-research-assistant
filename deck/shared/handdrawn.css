@@ -1,6 +1,7 @@
-/* Auto Research · hand-drawn deck tokens (huashu / ian-inspired) */
+/* Auto Research · hand-drawn deck (huashu / ian-inspired, keep tokens stable) */
 :root {
   --paper: #fbfaf5;
+  --paper-warm: #f6f1e8;
   --ink: #1a1a1a;
   --muted: #5f5a50;
   --blue: #d9e8f6;
@@ -8,10 +9,11 @@
   --peach: #f5deb8;
   --lavender: #e4dcf4;
   --accent: #6b9fd4;
-  --pad-x: 100px;
-  --pad-y: 72px;
+  --pad-x: 96px;
+  --pad-y: 64px;
   --font-hand: "Patrick Hand", "Ma Shan Zheng", "Noto Sans SC", cursive;
   --font-body: "Noto Sans SC", system-ui, sans-serif;
+  --shadow-sketch: 5px 5px 0 rgba(26, 26, 26, 0.07);
 }
 
 html { font-size: 16px; }
@@ -22,11 +24,13 @@ body {
   margin: 0;
   padding: var(--pad-y) var(--pad-x);
   box-sizing: border-box;
-  background: var(--paper);
+  background:
+    radial-gradient(ellipse 120% 80% at 50% 0%, var(--paper-warm) 0%, transparent 55%),
+    var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 30px;
-  line-height: 1.5;
+  font-size: 32px;
+  line-height: 1.45;
   position: relative;
   overflow: hidden;
 }
@@ -66,10 +70,10 @@ body::after { bottom: 28px; right: 28px; }
 
 h1 {
   font-family: var(--font-hand);
-  font-size: 72px;
+  font-size: 80px;
   font-weight: 600;
-  line-height: 1.15;
-  margin: 0 0 20px;
+  line-height: 1.12;
+  margin: 0 0 16px;
   text-align: center;
 }
 
@@ -86,9 +90,10 @@ h1::after {
 
 .subtitle {
   text-align: center;
-  font-size: 34px;
+  font-family: var(--font-hand);
+  font-size: 38px;
   color: var(--muted);
-  margin: 0 0 40px;
+  margin: 0 0 36px;
 }
 
 .kicker {
@@ -145,9 +150,11 @@ h1::after {
 .sketch-box ul {
   margin: 0;
   padding-left: 28px;
-  font-size: 28px;
-  line-height: 1.65;
+  font-family: var(--font-hand);
+  font-size: 34px;
+  line-height: 1.55;
 }
+.sketch-box li { margin-bottom: 0.35em; }
 
 .pipeline {
   display: flex;
@@ -314,4 +321,122 @@ h1::after {
   font-size: 48px;
   color: var(--muted);
   opacity: 0.85;
+}
+
+/* cover doodle strip */
+.cover-doodle {
+  margin: 48px auto 0;
+  display: block;
+  opacity: 0.88;
+}
+
+/* world-model triad (slide 05) */
+.wm-hook {
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 44px;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.wm-visual {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr 1fr;
+  gap: 28px;
+  align-items: center;
+  margin: 28px 0 20px;
+}
+.wm-brain {
+  text-align: center;
+  padding: 20px;
+}
+.wm-brain svg { width: 200px; height: auto; }
+.wm-brain p {
+  font-family: var(--font-hand);
+  font-size: 30px;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+.wm-triad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.wm-card {
+  text-align: center;
+  padding: 28px 20px 24px;
+  border: 2.5px solid var(--ink);
+  border-radius: 22px;
+  box-shadow: var(--shadow-sketch);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.wm-card:nth-child(1) { background: var(--blue); transform: rotate(-1deg); }
+.wm-card:nth-child(2) { background: var(--green); transform: rotate(0.5deg); }
+.wm-card:nth-child(3) { background: var(--peach); transform: rotate(-0.6deg); }
+.wm-card .wm-icon { width: 88px; height: 88px; margin-bottom: 12px; }
+.wm-card h3 {
+  font-family: var(--font-hand);
+  font-size: 40px;
+  margin: 0 0 10px;
+}
+.wm-card .wm-role {
+  font-family: var(--font-hand);
+  font-size: 28px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.wm-card .wm-example {
+  font-family: var(--font-hand);
+  font-size: 34px;
+  line-height: 1.35;
+  margin: 0;
+}
+.wm-foot {
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 36px;
+  color: var(--accent);
+  margin-top: 8px;
+}
+
+/* pipeline sketch ring */
+.pipe-ring {
+  position: relative;
+  margin: 32px auto 24px;
+  max-width: 1500px;
+}
+.pipe-ring .pipeline { margin: 0; gap: 6px; }
+.pipe-step {
+  font-size: 30px;
+  padding: 16px 20px;
+  box-shadow: var(--shadow-sketch);
+}
+.loop-sketch {
+  display: block;
+  margin: 12px auto 0;
+  opacity: 0.55;
+}
+
+/* idea cards — less text, bigger */
+.idea-card h3 { font-family: var(--font-hand); font-size: 42px; }
+.idea-card p { font-size: 28px; line-height: 1.4; }
+.idea-card .icon { font-size: 64px; }
+
+/* boundary — punchy short lines */
+.boundary-cols .sketch-box { min-height: 360px; }
+.boundary-cols h2 { font-family: var(--font-hand); font-size: 44px; }
+.boundary-cols ul {
+  font-family: var(--font-hand);
+  font-size: 34px;
+  padding-left: 24px;
+}
+.boundary-foot {
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 30px;
+  color: var(--muted);
+  margin-top: 24px;
 }
