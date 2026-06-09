@@ -330,76 +330,43 @@ h1::after {
   opacity: 0.88;
 }
 
-/* world-model triad (slide 05) */
-.wm-hook {
-  text-align: center;
-  font-family: var(--font-hand);
-  font-size: 44px;
-  margin: 0 0 8px;
-  color: var(--ink);
-}
-.wm-visual {
-  display: grid;
-  grid-template-columns: 1fr 0.85fr 1fr;
-  gap: 28px;
-  align-items: center;
-  margin: 28px 0 20px;
-}
-.wm-brain {
-  text-align: center;
-  padding: 20px;
-}
-.wm-brain svg { width: 200px; height: auto; }
-.wm-brain p {
-  font-family: var(--font-hand);
-  font-size: 30px;
-  color: var(--muted);
-  margin: 8px 0 0;
-}
-.wm-triad {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-.wm-card {
-  text-align: center;
-  padding: 28px 20px 24px;
-  border: 2.5px solid var(--ink);
-  border-radius: 22px;
-  box-shadow: var(--shadow-sketch);
-  min-height: 280px;
+/* demo intro (slide before world model) */
+.demo-intro .subtitle { margin-bottom: 48px; }
+.demo-flow {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  gap: 36px;
+  margin: 20px 0 40px;
 }
-.wm-card:nth-child(1) { background: var(--blue); transform: rotate(-1deg); }
-.wm-card:nth-child(2) { background: var(--green); transform: rotate(0.5deg); }
-.wm-card:nth-child(3) { background: var(--peach); transform: rotate(-0.6deg); }
-.wm-card .wm-icon { width: 88px; height: 88px; margin-bottom: 12px; }
-.wm-card h3 {
-  font-family: var(--font-hand);
-  font-size: 40px;
-  margin: 0 0 10px;
+.demo-step {
+  text-align: center;
+  padding: 32px 28px;
+  border: 2.5px solid var(--ink);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow-sketch);
+  min-width: 220px;
 }
-.wm-card .wm-role {
-  font-family: var(--font-hand);
-  font-size: 28px;
-  color: var(--muted);
-  margin-bottom: 14px;
-}
-.wm-card .wm-example {
+.demo-step:nth-child(1) { transform: rotate(-1deg); background: var(--lavender); }
+.demo-step:nth-child(3) { transform: rotate(0.6deg); background: var(--green); }
+.demo-step:nth-child(5) { transform: rotate(-0.5deg); background: var(--blue); }
+.demo-step p {
   font-family: var(--font-hand);
   font-size: 34px;
-  line-height: 1.35;
-  margin: 0;
+  margin: 16px 0 0;
 }
-.wm-foot {
+.demo-arrow {
+  font-family: var(--font-hand);
+  font-size: 48px;
+  color: var(--muted);
+}
+.demo-tease {
   text-align: center;
   font-family: var(--font-hand);
-  font-size: 36px;
+  font-size: 32px;
   color: var(--accent);
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 /* pipeline sketch ring */
